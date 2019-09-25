@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin>
+   <extension point="com.change_vision.astah.ui.actionSets">
+      <actionSet
+            label="%action_set_label"
+            visible="true"
+            id="PluginADR.PluginADR.actionSet">
+         <menu
+               id="PluginADR"
+               label="%menu_group"
+               path="tool/PluginADR">
+         </menu>
+         <action
+               icon="icons/sample.gif"
+               id="PluginADR"
+		   label="%menu_label"
+               class="telas_swing.TemplateAction"
+               tooltip="%menu_tooltip"
+               menubarPath="tool/PluginADR/">
+         </action>
+     </actionSet>
+   </extension>
+   <extension point="com.change_vision.astah.ui.view">
+      <view
+            id="ADPickView"
+            type="extraTab"
+            class="telas_swing.ADPickView" />
+   </extension>
+</plugin>
