@@ -7,12 +7,18 @@ import java.util.ResourceBundle;
 import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;
 
+import com.change_vision.jude.api.inf.view.IDiagramViewManager;
+
 public class Activator implements BundleActivator {
 
 	private static ResourceBundle resourceBundle;
+	private AstahAPIUtils utils = new AstahAPIUtils();
 	
 	public void start(BundleContext context) {
 		initializeResourceBundle();
+		ActivityDiagramDropExtension diagramDropTargetListener = new ActivityDiagramDropExtension();
+		IDiagramViewManager diagramViewManager = utils.getDiagramViewManager();
+	    diagramViewManager.addDropTargetListener(diagramDropTargetListener);
 	}
 
 	private void initializeResourceBundle() {

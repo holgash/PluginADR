@@ -24,6 +24,6 @@
       <view
             id="ADPickView"
             type="extraTab"
-            class="telas_swing.ADPickView" />
+            class="telas_swing.ADPickView2" />
    </extension>
 </plugin>
