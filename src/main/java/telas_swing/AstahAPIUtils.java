@@ -2,13 +2,12 @@ package telas_swing;
 
 import javax.swing.JFrame;
 
+import com.change_vision.jude.api.inf.editor.ActivityDiagramEditor;
 import com.change_vision.jude.api.inf.editor.BasicModelEditor;
-import com.change_vision.jude.api.inf.editor.ClassDiagramEditor;
 import com.change_vision.jude.api.inf.editor.IDiagramEditorFactory;
 import com.change_vision.jude.api.inf.editor.IModelEditorFactory;
 import com.change_vision.jude.api.inf.exception.InvalidEditingException;
 import com.change_vision.jude.api.inf.exception.InvalidUsingException;
-import com.change_vision.jude.api.inf.model.IClassDiagram;
 import com.change_vision.jude.api.inf.project.ProjectAccessor;
 import com.change_vision.jude.api.inf.project.ProjectAccessorFactory;
 import com.change_vision.jude.api.inf.view.IDiagramViewManager;
@@ -34,9 +33,9 @@ public class AstahAPIUtils {
    * Get ClassDiagramEditor by which models on class diagrams can be modified
  * @throws Exception 
    */
-  public ClassDiagramEditor getClassDiagramEditor() throws Exception {
+  public ActivityDiagramEditor getActivityDiagramEditor() throws Exception {
     try {
-      return getDiagramEditorFactory().getClassDiagramEditor();
+      return getDiagramEditorFactory().getActivityDiagramEditor();
     } catch (InvalidUsingException e) {
       throw new Exception(e);
     }

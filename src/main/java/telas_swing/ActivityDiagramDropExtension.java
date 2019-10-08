@@ -11,6 +11,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 
+import javax.swing.JOptionPane;
+
 import com.change_vision.jude.api.inf.model.IActivityDiagram;
 import com.change_vision.jude.api.inf.view.DiagramDropTargetListener;
 
@@ -59,8 +61,25 @@ public final class ActivityDiagramDropExtension extends DiagramDropTargetListene
     return list;
   }
 
+  //falta terminar
   @Override
   public void dropModels(DropTargetDropEvent dtde, Set<?> models) {
+	  
+	  dtde.acceptDrop(DnDConstants.ACTION_COPY);
+	  Transferable t = dtde.getTransferable();
+	  DataFlavor[] df = t.getTransferDataFlavors();
+	  List<IActivityDiagram> ActivityDiagrams = new ArrayList<IActivityDiagram>();
+	  for(DataFlavor f:df) {
+		  try {
+			  if(f instanceof IActivityDiagram) {
+				ActivityDiagrams.add((IActivityDiagram) f);  
+			  }
+		
+		  }catch(Exception e) {
+			 JOptionPane.showMessageDialog(null, "Error\n");
+		  }
+	  }
+	   
   }
 
   @Override
