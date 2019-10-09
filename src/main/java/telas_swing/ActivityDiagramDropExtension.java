@@ -11,8 +11,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 
-import javax.swing.JOptionPane;
-
 import com.change_vision.jude.api.inf.model.IActivityDiagram;
 import com.change_vision.jude.api.inf.view.DiagramDropTargetListener;
 
@@ -69,20 +67,33 @@ public final class ActivityDiagramDropExtension extends DiagramDropTargetListene
 	  Transferable t = dtde.getTransferable();
 	  DataFlavor[] df = t.getTransferDataFlavors();
 	  List<IActivityDiagram> ActivityDiagrams = new ArrayList<IActivityDiagram>();
+	  
+	  //opção 1
+	  /*Object[] array = models.toArray();
+	  for(Object obj: array) {
+		  if(obj instanceof IActivityDiagram) {
+			  ActivityDiagrams.add((IActivityDiagram) obj);
+		  }
+	  }*/
+
+	  //opção 2
+	  /*
 	  for(DataFlavor f:df) {
 		  try {
 			  if(f instanceof IActivityDiagram) {
-				ActivityDiagrams.add((IActivityDiagram) f);  
+				ActivityDiagrams.add((IActivityDiagram) f);
 			  }
 		
 		  }catch(Exception e) {
 			 JOptionPane.showMessageDialog(null, "Error\n");
 		  }
-	  }
-	   
+	  }*/
+	  
+	 
   }
 
-  @Override
+
+@Override
   public void dragEnter(DropTargetDragEvent dtde) {
   }
 
