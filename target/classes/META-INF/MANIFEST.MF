@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Astah-Edition: all
 Astah-Version: 6.7
-Bnd-LastModified: 1570577658966
+Bnd-LastModified: 1570752175838
 Build-Jdk: 1.8.0_221
 Built-By: Renato
 Bundle-Activator: telas_swing.Activator
@@ -17,12 +17,13 @@ Export-Package: telas_swing;version="1.0";uses:="com.change_vision.jude.
  api.inf.editor,com.change_vision.jude.api.inf.exception,com.change_visi
  on.jude.api.inf.project,com.change_vision.jude.api.inf.ui,com.change_vi
  sion.jude.api.inf.view,javax.swing,org.osgi.framework"
-Import-Package: com.change_vision.jude.api.inf.editor;resolution:=option
- al,com.change_vision.jude.api.inf.exception;resolution:=optional,com.ch
- ange_vision.jude.api.inf.model;resolution:=optional,com.change_vision.j
- ude.api.inf.project;resolution:=optional,com.change_vision.jude.api.inf
- .ui;resolution:=optional,com.change_vision.jude.api.inf.view;resolution
- :=optional,javax.swing;resolution:=optional,org.osgi.framework;resoluti
- on:=optional;version="[1.5,2)"
+Import-Package: com.change_vision.jude.api.inf;resolution:=optional,com.
+ change_vision.jude.api.inf.editor;resolution:=optional,com.change_visio
+ n.jude.api.inf.exception;resolution:=optional,com.change_vision.jude.ap
+ i.inf.model;resolution:=optional,com.change_vision.jude.api.inf.project
+ ;resolution:=optional,com.change_vision.jude.api.inf.ui;resolution:=opt
+ ional,com.change_vision.jude.api.inf.view;resolution:=optional,javax.sw
+ ing;resolution:=optional,org.osgi.framework;resolution:=optional;versio
+ n="[1.5,2)"
 Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.8))"
 Tool: Bnd-3.3.0.201609221906

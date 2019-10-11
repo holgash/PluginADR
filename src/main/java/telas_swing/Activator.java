@@ -16,9 +16,6 @@ public class Activator implements BundleActivator {
 	
 	public void start(BundleContext context) {
 		initializeResourceBundle();
-		ActivityDiagramDropExtension diagramDropTargetListener = new ActivityDiagramDropExtension();
-		IDiagramViewManager diagramViewManager = utils.getDiagramViewManager();
-	    diagramViewManager.addDropTargetListener(diagramDropTargetListener);
 	}
 
 	private void initializeResourceBundle() {
