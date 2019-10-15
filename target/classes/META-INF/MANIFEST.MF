@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Astah-Edition: all
 Astah-Version: 6.7
-Bnd-LastModified: 1570752175838
+Bnd-LastModified: 1570990396310
 Build-Jdk: 1.8.0_221
 Built-By: Renato
 Bundle-Activator: telas_swing.Activator
